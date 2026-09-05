@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sotots - Online Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">sotots<span>.com</span></div>
+    
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Sotots-এ পণ্য খুঁজুন..." onkeyup="filterProducts()">
+    </div>
+
+    <div class="nav-actions">
+      <button class="btn-login" onclick="openLoginModal()">👤 লগইন</button>
+      
+      <div class="cart-icon" onclick="toggleCart()">
+        🛒 <span id="cartCount">0</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-banner">
+    <h1>Welcome to <span>Sotots</span></h1>
+    <p>সেরা মানের পণ্য কিনুন সঠিক মূল্যে</p>
+  </section>
+
+  <main class="main-container">
+    <aside class="sidebar">
+      <h3>ক্যাটাগরি</h3>
+      <ul>
+        <li onclick="filterCategory('All')">সব পণ্য (All)</li>
+        <li onclick="filterCategory('Electronics')">ইলেক্ট্রনিক্স</li>
+        <li onclick="filterCategory('Fashion')">ফ্যাশন</li>
+      </ul>
+    </aside>
+
+    <section class="product-grid" id="productGrid">
+      </section>
+  </main>
+
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>আপনার কার্ট</h2>
+      <button onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="empty-msg">কার্ট খালি আছে</p>
+    </div>
+    <div class="cart-footer">
+      <div class="total-price">মোট: <span id="cartTotal">৳0</span></div>
+      <button class="btn-checkout" onclick="openCheckout()">📦 চেকআউট করুন</button>
+    </div>
+  </div>
+
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeLoginModal()">✕</span>
+      <h2>Sotots-এ লগইন করুন</h2>
+      <form onsubmit="handleLogin(event)">
+        <input type="email" placeholder="ইমেইল এড্রেস" required>
+        <input type="password" placeholder="পাসওয়ার্ড" required>
+        <button type="submit" class="btn-submit">লগইন</button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- 📦 WhatsApp Order Modal -->
+<div class="modal" id="orderModal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeOrderModal()">✕</span>
+    <h2>অর্ডার সম্পন্ন করুন</h2>
+    <form onsubmit="sendToWhatsApp(event)">
+      <input type="text" id="custName" placeholder="আপনার নাম" required>
+      <input type="text" id="custPhone" placeholder="মোবাইল নম্বর" required>
+      <input type="text" id="custAddress" placeholder="পূর্ণাঙ্গ ঠিকানা" required>
+      <button type="submit" class="btn-whatsapp">💬 WhatsApp-এ নিশ্চিত করুন</button>
+    </form>
+  </div>
+</div><script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
