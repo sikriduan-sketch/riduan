@@ -1,4 +1,4 @@
-// 🛍️ Sotots-এর সব পণ্য (নতুন পণ্য সহ)
+// 🛍️ Sotots-এর সব পণ্য
 const products = [
   { id: 1, name: "স্মার্ট ওয়াচ", price: 1200, category: "Electronics", image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300" },
   { id: 2, name: "ওয়ারলেস হেডফোন", price: 1500, category: "Electronics", image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300" },
@@ -7,7 +7,11 @@ const products = [
   { id: 5, name: "পোল্যান্ড ব্যাকপ্যাক", price: 1850, category: "Fashion", image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300" },
   { id: 6, name: "স্পোর্টস শু (Sneakers)", price: 2200, category: "Fashion", image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300" },
   { id: 7, name: "স্মার্ট ব্লুটুথ স্পিকার", price: 990, category: "Electronics", image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=300" },
-  { id: 8, name: "প্রিমিয়াম সানগ্লাস", price: 750, category: "Fashion", image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300" }
+  { id: 8, name: "প্রিমিয়াম সানগ্লাস", price: 750, category: "Fashion", image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300" },
+  { id: 9, name: "পাওয়ার ব্যাংক ১০,০০০mAh", price: 1350, category: "Electronics", image: "https://images.unsplash.com/photo-1609592424082-f38b2c68a483?w=300" },
+  { id: 10, name: "মেনস ক্লাসিক শার্ট", price: 850, category: "Fashion", image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=300" },
+  { id: 11, name: "লেডিস হ্যান্ডব্যাগ", price: 1600, category: "Fashion", image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=300" },
+  { id: 12, name: "গেমিং মাউস", price: 550, category: "Electronics", image: "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=300" }
 ];
 
 let cart = [];
@@ -114,8 +118,8 @@ function closeOrderModal() {
 function sendToWhatsApp(e) {
   e.preventDefault();
   
-  // 🔴 এখানে আপনার হোয়াটসঅ্যাপ নম্বর লিখুন (যেমন: 8801700000000)
-  const myWhatsAppNumber = "8801700000000"; 
+  // 🟢 আপনার আপডেট করা নম্বর যুক্ত করা হয়েছে
+  const myWhatsAppNumber = "8801518705706"; 
 
   const name = document.getElementById('custName').value;
   const phone = document.getElementById('custPhone').value;
@@ -143,7 +147,6 @@ function sendToWhatsApp(e) {
 
   window.open(whatsappURL, '_blank');
 
-  // কার্ট ক্লিয়ার করে ক্লোজ করা
   cart = [];
   updateCartUI();
   closeOrderModal();
